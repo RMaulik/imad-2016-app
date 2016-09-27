@@ -18,6 +18,35 @@ var article_one={
             <p>
                 My first article III content
             </p>`};
+
+var htmlTemplate=
+{
+ <html>
+    <head>
+        <title>
+            $(title)
+        </title>
+        <meta name="viewport" content="width-device-width, initial-scaled">
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <a href="/">Homepage</a>
+            </div>
+            <h3>
+                Article-one
+            </h3>
+            <div>
+                $(date)
+            </div>
+            $(content)
+        </div>
+    </body>
+</html>   
+};
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
